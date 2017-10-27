@@ -217,7 +217,7 @@ namespace BeFaster.App.Solutions
                     reduced += offer.Key * offerTimes;
                 }
 
-                foreach (var sku in basketGroupOfferSkus.OrderBy(s => prices[s.Name][0]))
+                foreach (var sku in basketGroupOfferSkus.OrderByDescending(s => prices[s.Name][1]))
                 {
                     if (reduced <= 0)
                         break;
