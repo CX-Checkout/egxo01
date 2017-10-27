@@ -26,6 +26,7 @@ namespace BeFaster.App.Tests.Solutions
         [TestCase("XYZ", ExpectedResult = 45)]
         [TestCase("STS", ExpectedResult = 45)]
         [TestCase("TTT", ExpectedResult = 45)]
+        [TestCase("XZZZ", ExpectedResult = 17+45)]
         public int Checkout(string skus)
         {
             return CheckoutSolution.Checkout(skus);

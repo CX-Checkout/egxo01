@@ -221,7 +221,19 @@ namespace BeFaster.App.Solutions
                     if (reduced <= 0)
                         break;
 
-                    sku.Count 
+                    sku.Count -= reduced;
+                    reduced = 0;
+
+                    if (sku.Count < 0)
+                    {
+                        reduced = -sku.Count;
+                        sku.Count = 0;
+                    }
+                    else
+                    {
+                        reduced = 0;
+                    }
+                    
                 }
             }
             
