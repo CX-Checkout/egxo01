@@ -9,13 +9,6 @@ namespace BeFaster.App.Solutions
     public static class CheckoutSolution
     {
         
-        /**
-| E    | 40    | 2E get one B free      |
-| F    | 10    | 2F get one F free      |
-| N    | 40    | 3N get one M free      |
-| R    | 50    | 3R get one Q free      |
-| U    | 40    | 3U get one U free      |
-        */
         private static Dictionary<char, Dictionary<char, Tuple<int, int>>> free = new Dictionary<char, Dictionary<char, Tuple<int, int>>>
         {
             ['E'] = new Dictionary<char, Tuple<int, int>>
