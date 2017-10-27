@@ -65,8 +65,15 @@ namespace BeFaster.App.Solutions
             {
                 foreach (var skuFree in free[sku.Name])
                 {
-                    var skuFreeInBasket = basketSkus.FirstOrDefault(b => b.Name)
+                    var toReduce = basketSkus.FirstOrDefault(b => b.Name == skuFree.Key);
+                    if (toReduce == null)
+                        continue;
+
+                    var freeItems = sku.Count / skuFree.Value.Item1;
+
+                    toReduce.Count = freeItems * skuFree.Value.Item2;
                     
+                    if (toReduce <)
                 }
             }
             
