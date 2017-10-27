@@ -176,6 +176,7 @@ namespace BeFaster.App.Solutions
                 })
                 .ToList();
 
+            
             // Free offers
             foreach (var sku in basketSkus.Where(s => free.ContainsKey(s.Name)))
             {
@@ -236,8 +237,6 @@ namespace BeFaster.App.Solutions
                     
                 }
             }
-            
-            totalSum += 0;
             
             // Individual prices
             totalSum += basketSkus
