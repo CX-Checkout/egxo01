@@ -46,7 +46,7 @@ namespace BeFaster.App.Solutions
                 var skuCheckoutSum = 0;
                 var skuPrices = items[g.Key];
                 var count = g.Count();
-                List(int) offers = skuPrices.Keys.0rderByDescending(k => k).ToList();
+                List<int> offers = skuPrices.Keys.OrderByDescending(k => k).ToList();
                 foreach (var offer in offers)
                 {
                     if (offer > count)
@@ -55,7 +55,7 @@ namespace BeFaster.App.Solutions
                     var offerTimes = count / offer;
 
                     skuCheckoutSum += skuPrices[offer] * offerTimes;
-                    count = count - offer * offerTines;
+                    count = count - offer * offerTimes;
                 }
                 return skuCheckoutSum;
             });
