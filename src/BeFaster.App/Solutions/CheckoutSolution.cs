@@ -41,7 +41,7 @@ namespace BeFaster.App.Solutions
             }
         };
         
-        private static Dictionary<char, Dictionary<int, int>> items = new Dictionary<char, Dictionary<int, int>>
+        private static Dictionary<char, Dictionary<int, int>> prices = new Dictionary<char, Dictionary<int, int>>
         {
             ['A'] = new Dictionary<int, int>
             {
@@ -160,7 +160,7 @@ namespace BeFaster.App.Solutions
 
         public static int Checkout(string skus)
         {
-            var availableSkus = items.Keys.ToList();
+            var availableSkus = prices.Keys.ToList();
 
             if (skus.Any(sku => !availableSkus.Contains(sku)))
             {
@@ -202,6 +202,8 @@ namespace BeFaster.App.Solutions
                 var basketGroupOfferSkus = basketSkus.Where(s => groupOffer.Key.Contains(s.Name)).ToList();
                 var totalGroupCount = basketGroupOfferSkus.Sum(s => s.Count);
 
+                var reduced = 0;
+                
                 foreach (var offer in groupOffer.Value)
                 {
                     if (offer.Key > totalGroupCount) 
@@ -211,6 +213,15 @@ namespace BeFaster.App.Solutions
 
                     totalSum += offer.Value * offerTimes;
                     totalGroupCount -= offer.Key * offerTimes;
+                    reduced += offer.Key * offerTimes;
+                }
+
+                foreach (var sku in basketGroupOfferSkus.OrderBy(s => prices[s.Name][1]))
+                {
+                    if (reduced <= 0)
+                        break;
+
+                    sku.Count 
                 }
             }
             
@@ -222,7 +233,7 @@ namespace BeFaster.App.Solutions
             {
                 var skuCheckoutSum = 0;
                 
-                var skuPrices = items[s.Name];
+                var skuPrices = prices[s.Name];
                 
                 List<int> offers = skuPrices.Keys.OrderByDescending(k => k).ToList();
                 
