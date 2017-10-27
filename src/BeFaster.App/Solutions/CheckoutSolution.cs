@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using BeFaster.Runner.Exceptions;
 
@@ -7,7 +8,13 @@ namespace BeFaster.App.Solutions
 {
     public static class CheckoutSolution
     {
-        private static Dictionary<char Dictionary<char, Tuple<int,int>>
+        private static Dictionary<char, Dictionary<char, Tuple<int, int>>> free = new Dictionary<char, Dictionary<char, Tuple<int, int>>>
+        {
+            ['E'] = new Dictionary<char, Tuple<int, int>>
+            {
+                ['B'] = new Tuple<int, int>(2, 1)
+            }    
+        };
         
         private static Dictionary<char, Dictionary<int, int>> items = new Dictionary<char, Dictionary<int, int>>
         {
