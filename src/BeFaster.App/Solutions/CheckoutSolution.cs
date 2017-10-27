@@ -14,7 +14,7 @@ namespace BeFaster.App.Solutions
             {
                 ['B'] = new Tuple<int, int>(2, 1)
             },
-            ['E'] = new Dictionary<char, Tuple<int, int>>
+            ['F'] = new Dictionary<char, Tuple<int, int>>
             {
                 ['F'] = new Tuple<int, int>(3, 1)
             }    
