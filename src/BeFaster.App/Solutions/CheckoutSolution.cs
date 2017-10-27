@@ -44,7 +44,7 @@ namespace BeFaster.App.Solutions
                 return -1;
             }
             
-            
+            var basketSkusCount
             
             return basketSkus
                 .GroupBy(sku => sku)
