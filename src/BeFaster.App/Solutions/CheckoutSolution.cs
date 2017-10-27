@@ -41,7 +41,7 @@ namespace BeFaster.App.Solutions
             
             return basketSkus
                 .GroupBy(sku => sku)
-                .Sum(g ->
+                .Sum(g =>
             {
                 var skuCheckoutSum = 0;
                 var skuPrices = items[g.Key];
