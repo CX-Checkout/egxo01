@@ -43,26 +43,35 @@ namespace BeFaster.App.Solutions
             {
                 return -1;
             }
-            
-            var basketSkusCount = basketSkus.
-            
-            return basketSkus
+
+            var basketSkusCount = basketSkus
                 .GroupBy(sku => sku)
-                .Sum(g =>
+                .Select(sku => new Sku
+                {
+                    Name = sku.Key,
+                    Count = sku.Count()
+                })
+                .ToList();
+
+            
+            return basketSkusCount
+                .Sum(s =>
             {
                 var skuCheckoutSum = 0;
-                var skuPrices = items[g.Key];
-                var count = g.Count();
+                
+                var skuPrices = items[s.Name];
+                
                 List<int> offers = skuPrices.Keys.OrderByDescending(k => k).ToList();
+                
                 foreach (var offer in offers)
                 {
-                    if (offer > count)
+                    if (offer > s.Count)
                         continue;
 
-                    var offerTimes = count / offer;
+                    var offerTimes = s.Count / offer;
 
                     skuCheckoutSum += skuPrices[offer] * offerTimes;
-                    count = count - offer * offerTimes;
+                    s= count - offer * offerTimes;
                 }
                 return skuCheckoutSum;
             });
