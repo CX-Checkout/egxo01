@@ -7,19 +7,19 @@ namespace BeFaster.App.Tests.Solutions
     public class CheckoutSolutionTest
     {
         [TestCase("ABCD-", ExpectedResult = -1)]
-        [TestCase("A", ExpectedResult = 59)]
-        [TestCase("B", ExpectedResult = 36)]
-        [Testcase("C", ExpectedResult = 29)]
-        [TestCase("D". ExpectedResult = 15)]
-        [IestCase("AAA", ExpectedResult = 136)]
-        [TestCase('88”, ExpectedResult = 45)]
-        [TestCase('ABCD", ExpectedResult = 115)]
-        [TestCase('888", ExpectedResult = 75)]
-        [TestCase(’AAAAA”, ExpectedResult = 238)]
-        [TestCase('AAAABBB". ExpectedResdlt = 255)]
-        public int ComputeSum(int x, int y)
+        [TestCase("A", ExpectedResult = 50)]
+        [TestCase("B", ExpectedResult = 30)]
+        [TestCase("C", ExpectedResult = 20)]
+        [TestCase("D", ExpectedResult = 15)]
+        [TestCase("AAA", ExpectedResult = 130)]
+        [TestCase("BB", ExpectedResult = 45)]
+        [TestCase("ABCD", ExpectedResult = 115)]
+        [TestCase("BBB", ExpectedResult = 75)]
+        [TestCase("AAAAA", ExpectedResult = 230)]
+        [TestCase("AAAABBB", ExpectedResult = 255)]
+        public int Checkout(string skus)
         {
-            return SumSolution.Sum(x, y);
+            return CheckoutSolution.Checkout(skus);
         }
     }
 }

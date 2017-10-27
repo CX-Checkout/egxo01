@@ -4,7 +4,7 @@ using BeFaster.Runner.Exceptions;
 
 namespace BeFaster.App.Solutions
 {
-    internal static class CheckoutSolution
+    public static class CheckoutSolution
     {
         private static Dictionary<char, Dictionary<int, int>> items = new Dictionary<char, Dictionary<int, int>>
         {
