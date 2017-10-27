@@ -10,6 +10,7 @@ namespace BeFaster.App.Solutions
         {
             ['A'] = new Dictionary<int, int>
             {
+                [5] = 200,
                 [3] = 130,
                 [1] = 50
             },
@@ -25,6 +26,10 @@ namespace BeFaster.App.Solutions
             ['D'] = new Dictionary<int, int>
             {
                 [1] = 15
+            },
+            ['E'] = new Dictionary<int, int>
+            {
+                [1] = 40
             }
         };
 
