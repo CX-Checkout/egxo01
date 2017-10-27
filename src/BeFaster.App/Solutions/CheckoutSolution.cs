@@ -65,5 +65,12 @@ namespace BeFaster.App.Solutions
                 return skuCheckoutSum;
             });
         }
+
+        private class Sku
+        {
+            public char Name { get; set; }
+            
+            public int Count { get; set; }
+        }
     }
 }
