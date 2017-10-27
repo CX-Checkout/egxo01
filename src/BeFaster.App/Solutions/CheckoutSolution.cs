@@ -8,6 +8,14 @@ namespace BeFaster.App.Solutions
 {
     public static class CheckoutSolution
     {
+        
+        /**
+| E    | 40    | 2E get one B free      |
+| F    | 10    | 2F get one F free      |
+| N    | 40    | 3N get one M free      |
+| R    | 50    | 3R get one Q free      |
+| U    | 40    | 3U get one U free      |
+        */
         private static Dictionary<char, Dictionary<char, Tuple<int, int>>> free = new Dictionary<char, Dictionary<char, Tuple<int, int>>>
         {
             ['E'] = new Dictionary<char, Tuple<int, int>>
@@ -17,6 +25,18 @@ namespace BeFaster.App.Solutions
             ['F'] = new Dictionary<char, Tuple<int, int>>
             {
                 ['F'] = new Tuple<int, int>(3, 1)
+            },    
+            ['N'] = new Dictionary<char, Tuple<int, int>>
+            {
+                ['M'] = new Tuple<int, int>(3, 1)
+            },    
+            ['R'] = new Dictionary<char, Tuple<int, int>>
+            {
+                ['Q'] = new Tuple<int, int>(3, 1)
+            },
+            ['U'] = new Dictionary<char, Tuple<int, int>>
+            {
+                ['U'] = new Tuple<int, int>(3, 1)
             }    
         };
         
@@ -48,6 +68,92 @@ namespace BeFaster.App.Solutions
             ['F'] = new Dictionary<int, int>
             {
                 [1] = 10
+            },
+            ['G'] = new Dictionary<int, int>
+            {
+                [1] = 20
+            },
+            ['H'] = new Dictionary<int, int>
+            {
+                [10] = 80, 
+                [5] = 45, 
+                [1] = 10
+            },
+            ['I'] = new Dictionary<int, int>
+            {
+                [1] = 35
+            },
+            ['J'] = new Dictionary<int, int>
+            {
+                [1] = 60
+            },
+            ['K'] = new Dictionary<int, int>
+            {
+                [2] = 150, [1] = 80
+            },
+            ['L'] = new Dictionary<int, int>
+            {
+                [1] = 90
+            },
+            ['M'] = new Dictionary<int, int>
+            {
+                [1] = 15
+            },
+            ['N'] = new Dictionary<int, int>
+            {
+                [1] = 40
+            },
+            ['O'] = new Dictionary<int, int>
+            {
+                [1] = 10
+            },
+            ['P'] = new Dictionary<int, int>
+            {
+                [5] = 200, 
+                [1] = 50
+            },
+            ['Q'] = new Dictionary<int, int>
+            {
+                [3] = 80, 
+                [1] = 30
+            },
+            ['R'] = new Dictionary<int, int>
+            {
+                [1] = 50
+            },
+            ['S'] = new Dictionary<int, int>
+            {
+                [1] = 30
+            },
+            ['T'] = new Dictionary<int, int>
+            {
+                [1] = 20
+            },
+            ['U'] = new Dictionary<int, int>
+            {
+                [1] = 40
+            },
+            ['V'] = new Dictionary<int, int>
+            {
+                [3] = 130, 
+                [2] = 90, 
+                [1] = 50
+            },
+            ['W'] = new Dictionary<int, int>
+            {
+                [1] = 20
+            },
+            ['X'] = new Dictionary<int, int>
+            {
+                [1] = 90
+            },
+            ['Y'] = new Dictionary<int, int>
+            {
+                [1] = 10
+            },
+            ['Z'] = new Dictionary<int, int>
+            {
+                [1] = 50
             }
         };
 
