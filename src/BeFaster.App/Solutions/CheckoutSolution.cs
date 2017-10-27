@@ -71,9 +71,10 @@ namespace BeFaster.App.Solutions
 
                     var freeItems = sku.Count / skuFree.Value.Item1;
 
-                    toReduce.Count = freeItems * skuFree.Value.Item2;
-                    
-                    if (toReduce <)
+                    toReduce.Count -= freeItems * skuFree.Value.Item2;
+
+                    if (toReduce.Count < 0)
+                        toReduce.Count = 0;
                 }
             }
             
