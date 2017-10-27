@@ -13,6 +13,10 @@ namespace BeFaster.App.Solutions
             ['E'] = new Dictionary<char, Tuple<int, int>>
             {
                 ['B'] = new Tuple<int, int>(2, 1)
+            },
+            ['E'] = new Dictionary<char, Tuple<int, int>>
+            {
+                ['F'] = new Tuple<int, int>(3, 1)
             }    
         };
         
@@ -40,6 +44,10 @@ namespace BeFaster.App.Solutions
             ['E'] = new Dictionary<int, int>
             {
                 [1] = 40
+            },
+            ['F'] = new Dictionary<int, int>
+            {
+                [1] = 10
             }
         };
 
