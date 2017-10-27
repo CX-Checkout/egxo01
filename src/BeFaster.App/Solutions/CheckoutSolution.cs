@@ -168,6 +168,7 @@ namespace BeFaster.App.Solutions
                 })
                 .ToList();
 
+            // Free offers
             foreach (var sku in basketSkus.Where(s => free.ContainsKey(s.Name)))
             {
                 foreach (var skuFree in free[sku.Name])
@@ -184,8 +185,14 @@ namespace BeFaster.App.Solutions
                         toReduce.Count = 0;
                 }
             }
+
+            var totalSum = 0;
             
-            return basketSkus
+            // Group offers
+            totalSum += 0;
+            
+            // Individual prices
+            totalSum += basketSkus
                 .Sum(s =>
             {
                 var skuCheckoutSum = 0;
@@ -206,6 +213,8 @@ namespace BeFaster.App.Solutions
                 }
                 return skuCheckoutSum;
             });
+
+            return totalSum;
         }
 
         private class Sku
