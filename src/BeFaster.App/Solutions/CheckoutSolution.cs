@@ -199,7 +199,13 @@ namespace BeFaster.App.Solutions
             // Group offers
             foreach (var groupOffer in groupOffers)
             {
-                
+                var basketGroupOfferSkus = basketSkus.Where(s => groupOffer.Key.Contains(s.Name)).ToList();
+                var totalGroupCount = basketGroupOfferSkus.Sum(s => s.Count);
+
+                foreach (var offer in groupOffer.Value)
+                {
+                    
+                }
             }
             
             totalSum += 0;
