@@ -82,7 +82,7 @@ namespace BeFaster.App.Solutions
             },
             ['K'] = new Dictionary<int, int>
             {
-                [2] = 150, [1] = 80
+                [2] = 120, [1] = 70
             },
             ['L'] = new Dictionary<int, int>
             {
@@ -116,7 +116,7 @@ namespace BeFaster.App.Solutions
             },
             ['S'] = new Dictionary<int, int>
             {
-                [1] = 30
+                [1] = 20
             },
             ['T'] = new Dictionary<int, int>
             {
@@ -138,15 +138,15 @@ namespace BeFaster.App.Solutions
             },
             ['X'] = new Dictionary<int, int>
             {
-                [1] = 90
+                [1] = 17
             },
             ['Y'] = new Dictionary<int, int>
             {
-                [1] = 10
+                [1] = 20
             },
             ['Z'] = new Dictionary<int, int>
             {
-                [1] = 50
+                [1] = 21
             }
         };
 
