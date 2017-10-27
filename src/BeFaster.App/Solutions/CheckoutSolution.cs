@@ -204,7 +204,13 @@ namespace BeFaster.App.Solutions
 
                 foreach (var offer in groupOffer.Value)
                 {
-                    
+                    if (offer.Key > totalGroupCount) 
+                        continue;
+
+                    var offerTimes = totalGroupCount / offer.Key;
+
+                    totalSum += offer.Value * offerTimes;
+                    totalGroupCount -= offer.Key * offerTimes;
                 }
             }
             
@@ -228,7 +234,7 @@ namespace BeFaster.App.Solutions
                     var offerTimes = s.Count / offer;
 
                     skuCheckoutSum += skuPrices[offer] * offerTimes;
-                    s.Count = s.Count - offer * offerTimes;
+                    s.Count -= offer * offerTimes;
                 }
                 return skuCheckoutSum;
             });
