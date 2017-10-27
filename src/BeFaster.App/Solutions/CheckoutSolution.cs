@@ -47,14 +47,12 @@ namespace BeFaster.App.Solutions
         {
             var availableSkus = items.Keys.ToList();
 
-            var basketSkus = skus.ToArray();
-
-            if (basketSkus.Any(sku => !availableSkus.Contains(sku)))
+            if (skus.Any(sku => !availableSkus.Contains(sku)))
             {
                 return -1;
             }
 
-            var basketSkusCount = basketSkus
+            var basketSkus = skus
                 .GroupBy(sku => sku)
                 .Select(sku => new Sku
                 {
@@ -63,12 +61,16 @@ namespace BeFaster.App.Solutions
                 })
                 .ToList();
 
-            foreach (var VARIABLE in basketSkus.Where(s => free.))
+            foreach (var sku in basketSkus.Where(s => free.ContainsKey(s.Name)))
             {
-                
+                foreach (var skuFree in free[sku.Name])
+                {
+                    var skuFreeInBasket = basketSkus.FirstOrDefault(b => b.Name)
+                    
+                }
             }
             
-            return basketSkusCount
+            return basketSkus
                 .Sum(s =>
             {
                 var skuCheckoutSum = 0;
