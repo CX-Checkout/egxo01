@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BeFaster.Runner.Exceptions;
 
@@ -6,6 +7,8 @@ namespace BeFaster.App.Solutions
 {
     public static class CheckoutSolution
     {
+        private static Dictionary<char Dictionary<char, Tuple<int,int>>
+        
         private static Dictionary<char, Dictionary<int, int>> items = new Dictionary<char, Dictionary<int, int>>
         {
             ['A'] = new Dictionary<int, int>
@@ -71,7 +74,7 @@ namespace BeFaster.App.Solutions
                     var offerTimes = s.Count / offer;
 
                     skuCheckoutSum += skuPrices[offer] * offerTimes;
-                    s= count - offer * offerTimes;
+                    s.Count = s.Count - offer * offerTimes;
                 }
                 return skuCheckoutSum;
             });
