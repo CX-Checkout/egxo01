@@ -63,6 +63,10 @@ namespace BeFaster.App.Solutions
                 })
                 .ToList();
 
+            foreach (var VARIABLE in basketSkus.Where(s => free.))
+            {
+                
+            }
             
             return basketSkusCount
                 .Sum(s =>
