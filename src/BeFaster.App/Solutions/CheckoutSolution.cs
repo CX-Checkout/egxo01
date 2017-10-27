@@ -29,7 +29,7 @@ namespace BeFaster.App.Solutions
             },
             ['U'] = new Dictionary<char, Tuple<int, int>>
             {
-                ['U'] = new Tuple<int, int>(3, 1)
+                ['U'] = new Tuple<int, int>(4, 1)
             }    
         };
         
