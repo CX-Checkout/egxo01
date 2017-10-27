@@ -49,7 +49,7 @@ namespace BeFaster.App
             ClientRunner
                 .ForUsername(CredentialsConfigFile.Get("tdl_username"))
                 .WithServerHostname("run.befaster.io")
-                .WithActionIfNoArgs(RunnerAction.GetNewRoundDescription)
+                .WithActionIfNoArgs(RunnerAction.DeployToProduction)
                 .WithSolutionFor("sum", p => SumSolution.Sum(p[0].AsInt(), p[1].AsInt()))
                 .WithSolutionFor("hello", p => HelloSolution.Hello(p[0]))
                 .WithSolutionFor("fizz_buzz", p => FizzBuzzSolution.FizzBuzz(p[0].AsInt()))
