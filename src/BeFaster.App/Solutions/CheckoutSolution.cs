@@ -33,6 +33,14 @@ namespace BeFaster.App.Solutions
             }    
         };
         
+        private static Dictionary<string, Dictionary<int, int>> groupOffers = new Dictionary<string, Dictionary<int, int>>
+        {
+            ["STXYZ"] = new Dictionary<int, int>
+            {
+                [3] = 45
+            }
+        };
+        
         private static Dictionary<char, Dictionary<int, int>> items = new Dictionary<char, Dictionary<int, int>>
         {
             ['A'] = new Dictionary<int, int>
@@ -189,6 +197,11 @@ namespace BeFaster.App.Solutions
             var totalSum = 0;
             
             // Group offers
+            foreach (var groupOffer in groupOffers)
+            {
+                
+            }
+            
             totalSum += 0;
             
             // Individual prices
